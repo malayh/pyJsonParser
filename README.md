@@ -17,3 +17,38 @@ optional arguments:
   -t T        Get type
   --validate  Validate input json file and print errors
 ```
+
+# How does keys look like
+
+For the below json file named file.json
+```
+{
+  "abc":"some value",
+  "key2":{
+    "key3":"value2",
+    "key4":"value3",
+  },
+  "key5":[1,2,3]
+}
+```
+The following are few exmples of how this works
+```
+./pyJSONParser.py file.json -v .abc 
+somevalue
+
+./pyJSONParser.py file.json -k .
+abc
+key2
+key3
+
+./pyJSONParser.py file.json -k .key5
+0
+1
+2
+
+./pyJSONParser.py file.json -v .key2.key3
+value2
+
+./pyJSONParser.py file.json -v .key5.1
+2
+```
