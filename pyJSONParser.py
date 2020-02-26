@@ -11,9 +11,6 @@ import re
 WARNING:
     1) keys in the json cannot contain "."
 
-Reserved Key words:
-    1) FOR_EACH_KEY: run one command iterativly
-
 Exit codes:
     1 : File not found
     2 : bad json file
