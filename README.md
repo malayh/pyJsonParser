@@ -34,12 +34,12 @@ For the below json file named file.json
 The following are few exmples of how this works
 ```
 ./pyJSONParser.py file.json -v .abc 
-somevalue
+some value
 
 ./pyJSONParser.py file.json -k .
 abc
 key2
-key3
+key5
 
 ./pyJSONParser.py file.json -k .key5
 0
