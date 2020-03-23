@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 Copyright (c) 2020 Malay Hazarika (malay.hazarika@gmail.com)
 
@@ -33,6 +35,7 @@ Exit codes:
     2 : bad json file
     3 : key error
 """
+
 
 TESTING_MODE=False
 
