@@ -1,4 +1,7 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python3
+
+
+
 import json
 import argparse
 import sys
@@ -8,14 +11,13 @@ import re
 
 
 """
-WARNING:
-    1) keys in the json cannot contain "."
-
 Exit codes:
     1 : File not found
     2 : bad json file
     3 : key error
 """
+
+TESTING_MODE=False
 
 
 def getArguments():
@@ -30,7 +32,8 @@ def getArguments():
     return args
 
 def parseKeys(keyStr):
-    return [x for x in re.split(r'\.(?=\w+)',keyStr) if x!='' and x!='.']
+    return [x for x in re.split(r'/(?=\w+)',keyStr) if x!='' and x!='/']
+
 
 def getKeys(jData,keys):
     """
@@ -120,6 +123,11 @@ def main():
             print("Invalid key: {}".format(e))
         sys.exit(3)
 
+def test():
+    pass
 
 if __name__=="__main__":
-    main()
+    if not TESTING_MODE:
+        main()
+    else:
+        test()

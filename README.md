@@ -33,22 +33,22 @@ For the below json file named file.json
 ```
 The following are few exmples of how this works
 ```
-./pyJSONParser.py file.json -v .abc 
+./pyJSONParser.py file.json -v /abc 
 some value
 
-./pyJSONParser.py file.json -k .
+./pyJSONParser.py file.json -k /
 abc
 key2
 key5
 
-./pyJSONParser.py file.json -k .key5
+./pyJSONParser.py file.json -k /key5
 0
 1
 2
 
-./pyJSONParser.py file.json -v .key2.key3
+./pyJSONParser.py file.json -v /key2/key3
 value2
 
-./pyJSONParser.py file.json -v .key5.1
+./pyJSONParser.py file.json -v /key5/1
 2
 ```
